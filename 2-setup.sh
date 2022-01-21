@@ -1,6 +1,5 @@
 source /arrch/install.conf
 pacman -Syyu
-pacman -Sy rsync ntp --noconfirm --needed
 systemctl enable NetworkManager
 echo "--------------------------------------------------------"
 echo "           Setup Bahasa, lokal, Hostname & Hosts        "
@@ -47,6 +46,12 @@ useradd -mG wheel ${usrname}
 passwd ${usrname}
 echo "usrname=$usrname" >> /arrch/install.conf
 cp -rf /arrch /home/"${usrname}"
+
+/usr/bin/runuser -u ${usrname} -- sudo pacman -Sy --noconfirm --needed - < arrch/_user.txt
+/usr/bin/runuser -u ${usrname} -- sudo pacman -Sy --noconfirm --needed - < arrch/_user.txt
+/usr/bin/runuser -u ${usrname} -- sudo pacman -Sy --noconfirm --needed - < arrch/_user.txt
+/usr/bin/runuser -u ${usrname} -- sudo pacman -Sy --noconfirm --needed - < arrch/_user.txt
+
 #grub install
 case $boot in
 1)
