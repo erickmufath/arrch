@@ -33,4 +33,4 @@ echo "zramd=$zramd" >> arrch/install.conf
 echo "boot=$boot" >> arrch/install.conf
 echo "hstname=$hstname" >> arrch/install.conf
 echo "drive=$drive" >> arrch/install.conf
-cp -rf arrtx /mnt
+cp -rf arrch /mnt
