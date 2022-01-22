@@ -1,3 +1,4 @@
+source /arrch/install.conf
 cd /home/${usrname}/
 git clone https://github.com/addy-dclxvi/openbox-theme-collections ~/.themes
 rm -rf ~/.config/tint2
