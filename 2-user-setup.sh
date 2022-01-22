@@ -52,6 +52,8 @@ cp -rf /arrch /home/"${usrname}"
 /usr/bin/runuser -u ${usrname} -- sudo pacman -Sy --noconfirm --needed - < arrch/_user.txt
 /usr/bin/runuser -u ${usrname} -- sudo pacman -Sy --noconfirm --needed - < arrch/_user.txt
 
+/usr/bin/runuser -u ${usrname} -- /arrch/openboxyay.sh
+
 #grub install
 case $boot in
 1)
