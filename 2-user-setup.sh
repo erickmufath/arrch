@@ -35,7 +35,7 @@ pacman -Syyu
 echo "--------------------------------------------------------"
 echo "->] Input Root Password "
 echo "--------------------------------------------------------"
-arch-chroot /mnt passwd
+passwd
 clear
 echo "--------------------------------------------------------"
 read -p "->] Input Username :" usrname
