@@ -53,7 +53,8 @@ cp -rf /arrch /home/"${usrname}"
 /usr/bin/runuser -u ${usrname} -- sudo pacman -Sy --noconfirm --needed - < arrch/_user.txt
 
 /usr/bin/runuser -u ${usrname} -- /arrch/openboxyay.sh
-
+systemctl enable zramd
+/usr/bin/runuser -u ${usrname} -- flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 #grub install
 case $boot in
 1)
