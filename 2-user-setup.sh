@@ -1,6 +1,5 @@
 source /arrch/install.conf
 pacman -Syyu
-systemctl enable NetworkManager
 echo "--------------------------------------------------------"
 echo "           Setup Bahasa, lokal, Hostname & Hosts        "
 echo "--------------------------------------------------------"
@@ -18,12 +17,6 @@ echo ${hstname} >> /etc/hostname
 echo "127.0.0.1	localhost" >> /etc/hosts
 echo "::1	localhost" >> /etc/hosts
 echo "127.0.1.1	${hstname}.localdomain	${hstname}" >> /etc/hosts
-
-# Add sudo no password rights
-sed -i 's/^# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/' /etc/sudoers
-
-# Add sudo rights
-sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
 
 #Add parallel downloading
 sed -i 's/^#ParallelDownloads = 5/ParallelDownloads = 2/' /etc/pacman.conf
@@ -44,6 +37,13 @@ echo "->] Input User Password "
 echo "--------------------------------------------------------"
 useradd -mG wheel ${usrname}
 passwd ${usrname}
+
+# Add sudo no password rights
+sed -i 's/^# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/' /etc/sudoers
+
+# Add sudo rights
+sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
+
 echo "usrname=$usrname" >> /arrch/install.conf
 cp -rf /arrch /home/"${usrname}"
 
@@ -54,6 +54,7 @@ cp -rf /arrch /home/"${usrname}"
 
 /usr/bin/runuser -u ${usrname} -- /arrch/openboxyay.sh
 systemctl enable zramd
+systemctl enable NetworkManager
 /usr/bin/runuser -u ${usrname} -- flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 #grub install
 case $boot in
