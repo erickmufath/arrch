@@ -7,6 +7,11 @@ base-devel
 linux-headers
 
 xorg
+lightdm
+picom
+i3lock
+
+
 bluez
 bluez-utils
 ttf-caladea
