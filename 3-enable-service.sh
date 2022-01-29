@@ -9,3 +9,4 @@ systemctl stop dhcpcd.service
 systemctl enable NetworkManager.service
 systemctl enable bluetooth
 systemctl enable lightdm
+cp -rf /arrch/xorg.conf /etc/X11/
