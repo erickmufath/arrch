@@ -109,7 +109,7 @@ lxappearance
 tint2
 rofi
 openbox
-plasma
+discover
 nitrogen
 obconf
 brightnessctl
