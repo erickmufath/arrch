@@ -17,7 +17,6 @@ read -p "->] Input Drive untuk install Bootloader (Contoh : sda, sdb, atau nvmen
 sed -i 's/^#ParallelDownloads = 5/ParallelDownloads = 2/' /etc/pacman.conf
 #Enable multilib
 sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
-pacman -Syyu
 #basestrap
 pacstrap /mnt --needed - < arrch/_base.txt
 pacstrap /mnt --needed - < arrch/_base.txt
