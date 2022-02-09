@@ -5,6 +5,8 @@ wpa_supplicant
 mtools
 base-devel
 linux-headers
+linux-firmware-qlogic
+
 
 xorg
 sddm
