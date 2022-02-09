@@ -7,10 +7,9 @@ base-devel
 linux-headers
 
 xorg
-lightdm
-picom
-i3lock
-
+sddm
+plasma
+kde-application
 
 bluez
 bluez-utils
@@ -117,14 +116,3 @@ pulseaudio-zeroconf
 lsp-plugins
 pulsemixer
 alsa-utils
-
-rxvt-unicode
-lxappearance
-tint2
-rofi
-openbox
-discover
-nitrogen
-obconf
-brightnessctl
-volumeicon
