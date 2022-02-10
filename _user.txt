@@ -6,12 +6,10 @@ mtools
 base-devel
 linux-headers
 linux-firmware-qlogic
-#
 xorg
 sddm
 plasma
-kde-application
-#
+kde-applications
 bluez
 bluez-utils
 ttf-caladea
@@ -74,7 +72,6 @@ archlinux-keyring
 wget
 git
 libnewt
-#
 gvfs
 ntfsprogs
 ntfs-3g
@@ -106,7 +103,6 @@ libtheora
 libvpx
 gstreamer
 gst-libav
-#
 pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
